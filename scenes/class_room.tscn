@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://r8o7muj3o6f"]
+
+[ext_resource type="PackedScene" uid="uid://bj5265xqxkfm0" path="res://assets/models/class_room/scene.gltf" id="1_c6s5t"]
+[ext_resource type="Script" path="res://scripts/player_rot.gd" id="2_3h4re"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54qu4"]
+albedo_color = Color(0.713726, 0.827451, 0.937255, 1)
+
+[sub_resource type="Environment" id="Environment_fon71"]
+background_energy_multiplier = 7.8
+ssr_enabled = true
+ssao_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5bq4y"]
+
+[node name="ClassRoom" type="Node3D"]
+
+[node name="scene" parent="." instance=ExtResource("1_c6s5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54724, -1.19209e-07, 2.77812)
+
+[node name="Object_3" parent="scene/Sketchfab_model/anime schoolobjcleanermaterialmergergles" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2301, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0029, 3.94862, 13.3006)
+size = Vector3(0.01, 4, 2.65499)
+material = SubResource("StandardMaterial3D_54qu4")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0029, 3.94862, 16.5626)
+size = Vector3(0.01, 4, 2.65499)
+material = SubResource("StandardMaterial3D_54qu4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-3.70827e-08, -0.730961, 0.682419, -2.31422e-08, 0.682419, 0.730961, -1, 1.13133e-08, -4.2222e-08, 13.3598, 13.7888, 11.0323)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fon71")
+
+[node name="player_rot" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6685, 1.64108, 12.0406)
+script = ExtResource("2_3h4re")
+
+[node name="head" type="Node3D" parent="player_rot"]
+
+[node name="Camera3D" type="Camera3D" parent="player_rot/head"]
+transform = Transform3D(-0.911525, 0, -0.411244, 0, 1, 0, 0.411244, 0, -0.911525, 0, 0.517624, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player_rot"]
+shape = SubResource("CapsuleShape3D_5bq4y")
+
+[node name="girls" type="Node3D" parent="."]
+
+[editable path="scene"]

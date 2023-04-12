@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://djbq0cpgxh1mx"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_bpm52"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5id1v"]
+radius = 0.260138
+
+[node name="enemy" type="CharacterBody3D"]
+script = ExtResource("1_bpm52")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_5id1v")

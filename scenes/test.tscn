@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://c1taawj0ega1x"]
+
+[ext_resource type="PackedScene" uid="uid://ds55dbxdcsj44" path="res://scenes/player.tscn" id="1_ghewn"]
+[ext_resource type="PackedScene" uid="uid://ccbbv60q6xivw" path="res://scenes/letter.tscn" id="2_6c1ve"]
+[ext_resource type="PackedScene" uid="uid://djbq0cpgxh1mx" path="res://scenes/enemy.tscn" id="3_52r0l"]
+[ext_resource type="PackedScene" uid="uid://chskgg5ujg3j1" path="res://assets/models/characters/Female_Standing.glb" id="4_xsym7"]
+[ext_resource type="PackedScene" uid="uid://dsq4owtgtjt7y" path="res://assets/models/buildings/Building1_Large.glb" id="5_j0y2x"]
+[ext_resource type="PackedScene" uid="uid://cpmexju80asp4" path="res://assets/models/buildings/Building1_Small.glb" id="6_apjgc"]
+[ext_resource type="PackedScene" uid="uid://b4upwhxfs7ris" path="res://assets/models/buildings/Building3_Big.glb" id="7_yjicx"]
+
+[sub_resource type="Curve3D" id="Curve3D_q8ae7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0204978, 2.0504e-05, 0.0394479, 0, 0, 0, 0, 0, 0, 0.945435, 2.0504e-05, 1.00384, 0, 0, 0, 0, 0, 0, 1.91421, 2.0504e-05, 2.51618),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7skge"]
+sky_top_color = Color(0.584314, 0.65098, 0.745098, 1)
+sky_horizon_color = Color(0.696078, 0.704902, 0.719608, 1)
+ground_bottom_color = Color(0.2, 0.168627, 0.133333, 1)
+ground_horizon_color = Color(0.696078, 0.704902, 0.719608, 1)
+
+[sub_resource type="Sky" id="Sky_3fe4a"]
+sky_material = SubResource("ProceduralSkyMaterial_7skge")
+
+[sub_resource type="Environment" id="Environment_a14gc"]
+background_mode = 2
+sky = SubResource("Sky_3fe4a")
+ambient_light_energy = 8.6
+tonemap_mode = 3
+tonemap_white = 2.0
+ssr_fade_out = 1.03527
+ssr_depth_tolerance = 0.01
+ssil_intensity = 2.0
+glow_enabled = true
+glow_bloom = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qltn2"]
+albedo_color = Color(0, 0.713726, 0.294118, 1)
+
+[node name="test" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78161, 0.415751, -0.0988082)
+curve = SubResource("Curve3D_q8ae7")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.721715, 0, 0.69219, 0, 1, 0, -0.69219, 0, 0.721715, 0.0204978, 2.0504e-05, 0.0394479)
+loop = false
+
+[node name="enemy" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.377391, 0)
+hp = 20.0
+path_follow = NodePath("..")
+path_speed = 0.25
+
+[node name="CollisionShape3D" parent="Path3D/PathFollow3D/enemy" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
+
+[node name="Female_Standing" parent="Path3D/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.894154, -0.177827, 0.410933, 0, 0.917755, 0.397148, -0.447759, 0.355111, -0.820614, 0, 0, 0)
+light_color = Color(1, 1, 0.588235, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a14gc")
+
+[node name="player" parent="." instance=ExtResource("1_ghewn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.511827, 2.08125, -2.02925)
+
+[node name="objects" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="objects"]
+use_collision = true
+size = Vector3(100, 0.1, 100)
+material = SubResource("StandardMaterial3D_qltn2")
+
+[node name="table" type="CSGBox3D" parent="objects"]
+transform = Transform3D(0.317404, 0, -0.94829, 0, 1, 0, 0.94829, 0, 0.317404, 5.54612, 1, -5.30789)
+size = Vector3(1, 1, 0.2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="objects/table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.460959, 0)
+size = Vector3(0.1, 1, 0.1)
+
+[node name="letter" parent="objects/table" instance=ExtResource("2_6c1ve")]
+is_text = true
+text = "абракадабра, алахакбар"
+q_text = "прими же квест таблички"
+
+[node name="letter" parent="objects" instance=ExtResource("2_6c1ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406739, 0.810176, -2.86538)
+is_quest = true
+q_text = "Убей моба"
+
+[node name="Building1_Large" parent="." instance=ExtResource("5_j0y2x")]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.52393, 0.0499997, 6.43596)
+
+[node name="Building1_Small" parent="." instance=ExtResource("6_apjgc")]
+transform = Transform3D(-2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 2.80469, 0.0360258, 6.4133)
+
+[node name="Building3_Big" parent="." instance=ExtResource("7_yjicx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.066781, 0.0500002, -10.9542)
+
+[editable path="Path3D/PathFollow3D/enemy"]
+[editable path="objects/letter"]

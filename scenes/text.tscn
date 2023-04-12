@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6k482geigcem"]
+
+[ext_resource type="Script" path="res://scripts/text.gd" id="1_bxc5k"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="2_8l8k2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p5lv8"]
+font = ExtResource("2_8l8k2")
+font_size = 32
+font_color = Color(0.223529, 0.223529, 0.223529, 1)
+
+[node name="text" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bxc5k")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 512.0
+offset_right = 104.0
+offset_bottom = 545.0
+label_settings = SubResource("LabelSettings_p5lv8")
+language = "ru"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
