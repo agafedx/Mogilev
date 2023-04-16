@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://c71cjjfdmsvml"]
+
+[ext_resource type="Texture2D" uid="uid://dxsm03vtgvbrf" path="res://assets/PNG/UI/Card X3.png" id="1_dsj3p"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="2_amnpa"]
+[ext_resource type="Script" path="res://scripts/quest_template.gd" id="2_tjsoh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hm4gb"]
+texture = ExtResource("1_dsj3p")
+modulate_color = Color(0.447059, 0.447059, 0.447059, 1)
+
+[sub_resource type="Theme" id="Theme_ia7f8"]
+Panel/styles/panel = SubResource("StyleBoxTexture_hm4gb")
+
+[sub_resource type="LabelSettings" id="LabelSettings_1fwre"]
+font = ExtResource("2_amnpa")
+font_size = 24
+
+[node name="quest_template" type="Panel"]
+custom_minimum_size = Vector2(800, 60)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -352.0
+offset_bottom = -584.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ia7f8")
+script = ExtResource("2_tjsoh")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = -32.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "12345676543213456"
+label_settings = SubResource("LabelSettings_1fwre")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

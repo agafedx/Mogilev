@@ -1,5 +1,6 @@
 class_name Enemy 
 extends CharacterBody3D
+@export var id : int
 @export var hp : float
 @export var ad : float
 @export var path_follow : PathFollow3D
@@ -10,6 +11,7 @@ func damage(x):
 	if hp<=0:
 		die()
 func die():
+	G.killed_enemies[id]+=1
 	get_parent().remove_child(self)
 
 func _process(delta):

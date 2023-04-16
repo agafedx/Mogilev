@@ -2,11 +2,9 @@ extends Area3D
 @onready var textScene :PackedScene = load("res://scenes/text.tscn")
 @export var is_text: bool
 @export_multiline var text : String
-@export var is_activity : bool
-@export var act_scene : PackedScene
 @export var is_quest : bool
-@export_multiline var q_text : String
 @export var quest_scene : PackedScene
+@export var id : int
 var is_used: bool = false
 func _on_body_entered(body):
 	if body is Player && !is_used:
@@ -17,11 +15,9 @@ func _on_body_entered(body):
 			body.add_child(t)
 			is_used = true
 			$Sprite3D.hide()
-		elif is_activity:
-			$Sprite3D.hide()
 		elif is_quest && !G.is_quest_showing:
 			var q = quest_scene.instantiate()
-			q.quest_text = q_text
+			q.id = self.id
 			body.add_child(q)
 			is_used = true
 			$Sprite3D.hide()

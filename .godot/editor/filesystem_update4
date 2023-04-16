@@ -1,15 +1,2 @@
-res://scenes/player.tscn
-res://scripts/player.gd
-res://scripts/g.gd
-res://scenes/class_room.tscn
-res://scenes/test.tscn
-res://scenes/letter.tscn
-res://scenes/text.tscn
-res://scenes/quest.tscn
-res://scripts/enemy.gd
-res://scenes/enemy.tscn
-res://assets/models/characters/new_shader.gdshader
-res://scripts/quest.gd
-res://scripts/text.gd
-res://scripts/letter.gd
-res://scripts/cs.gd
+res://scenes/game.tscn
+res://scenes/pause.tscn

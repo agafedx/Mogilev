@@ -1,10 +1,10 @@
 2a60927148abd1d33b818b535e306557
-::res://::1681315529
+::res://::1681586854
 icon.svg::CompressedTexture2D::2070175827183647191::1679159909::1679159929::1::::<><>::
 ::res://addons/::1681315382
-::res://addons/godot-git-plugin/::1681315383
+::res://addons/godot-git-plugin/::1681315640
 git_plugin.gdextension::GDExtension::-1::1681315383::0::1::::<><>::
-plugin.cfg::TextFile::-1::1681315383::0::1::::<><>::
+plugin.cfg::TextFile::-1::1681315640::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1681315382::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1681315383
 ::res://addons/godot-git-plugin/macos/::1681315383
@@ -56,7 +56,7 @@ Tank2.glb::PackedScene::5537871995785033051::1681211408::1681290305::1::::<><>::
 Tank3.glb::PackedScene::6503824487082707089::1681211449::1681290306::1::::<><>::
 Tank4.glb::PackedScene::6121416288171572985::1681211468::1681290306::1::::<><>::
 Tank.glb::PackedScene::7496128460996053753::1681211392::1681290306::1::::<><>::
-::res://assets/PNG/::1681288075
+::res://assets/PNG/::1681327357
 ::res://assets/PNG/Black/::1681289214
 crosshair014.png::CompressedTexture2D::2541056789182356209::1681288067::1681288094::1::::<><>::
 crosshair015.png::CompressedTexture2D::819667424934527769::1681288067::1681288094::1::::<><>::
@@ -848,6 +848,20 @@ crosshair197.png::CompressedTexture2D::4724093442011572857::1681288074::16812880
 crosshair198.png::CompressedTexture2D::7498592615340508197::1681288074::1681288092::1::::<><>::
 crosshair199.png::CompressedTexture2D::4866733762887374065::1681288074::1681288092::1::::<><>::
 crosshair200.png::CompressedTexture2D::3606012596773967476::1681288074::1681288092::1::::<><>::
+::res://assets/PNG/UI/::1681459502
+Card X2.png::CompressedTexture2D::4135348854108712585::1681327608::1681327615::1::::<><>::
+Card X3.png::CompressedTexture2D::8811539007054758899::1681327608::1681327615::1::::<><>::
+Card X5.png::CompressedTexture2D::5740170264705981053::1681327367::1681327473::1::::<><>::
+Card X6.png::CompressedTexture2D::5685892569904766499::1681327367::1681327473::1::::<><>::
+close.png::CompressedTexture2D::244185836273888634::1681327386::1681327473::1::::<><>::
+menu.png::CompressedTexture2D::4585738878397399992::1681327444::1681327473::1::::<><>::
+next.png::CompressedTexture2D::9108473074171865753::1681327444::1681327473::1::::<><>::
+quest.png::CompressedTexture2D::257155787214955933::1681327403::1681327473::1::::<><>::
+::res://assets/PNG/UI/button/::1681327615
+Button Active.png::CompressedTexture2D::3357156458048430731::1681327587::1681327615::1::::<><>::
+Button Disable.png::CompressedTexture2D::3205149570110771340::1681327587::1681327615::1::::<><>::
+Button Hover.png::CompressedTexture2D::2770552603726348429::1681327587::1681327615::1::::<><>::
+Button Normal.png::CompressedTexture2D::2875888858163702481::1681327587::1681327615::1::::<><>::
 ::res://assets/PNG/White/::1681288093
 crosshair001.png::CompressedTexture2D::5312156725101230007::1681288074::1681288092::1::::<><>::
 crosshair002.png::CompressedTexture2D::4596046107442167841::1681288074::1681288092::1::::<><>::
@@ -1250,21 +1264,28 @@ crosshair197.png::CompressedTexture2D::6193266523671559192::1681288077::16812880
 crosshair198.png::CompressedTexture2D::6016578632843157514::1681288077::1681288093::1::::<><>::
 crosshair199.png::CompressedTexture2D::1070475291896798987::1681288077::1681288093::1::::<><>::
 crosshair200.png::CompressedTexture2D::1451395141808398459::1681288077::1681288093::1::::<><>::
-::res://scenes/::1681305231
+::res://scenes/::1681487034
 animated_pistol.tscn::PackedScene::6797207738275429066::1681217627::0::1::::<><>::uid://c6a546ai5mqqw<>uid://bxrap2nes65ur<>uid://dwjkgelbrhe70<>uid://04jdrlworcp<>uid://cajy30742d0a2<>uid://dkmehh4wkgbf0
-class_room.tscn::PackedScene::37124783901688907::1681305170::0::1::::<><>::uid://bj5265xqxkfm0<>res://scripts/player_rot.gd
-enemy.tscn::PackedScene::7794042266829960639::1681305171::0::1::::<><>::res://scripts/enemy.gd
-letter.tscn::PackedScene::4915383318694367976::1681305171::0::1::::<><>::res://scripts/letter.gd<>uid://qiyj01s84nhv<>uid://ciy4vh6ur6okf
-player.tscn::PackedScene::8486419524543937515::1681305171::0::1::::<><>::res://scripts/player.gd<>uid://c6a546ai5mqqw<>uid://bxrap2nes65ur<>uid://dwjkgelbrhe70<>uid://04jdrlworcp<>uid://cajy30742d0a2<>uid://dkmehh4wkgbf0<>uid://bcg53mgc2nild<>uid://c0ieufn6uoqs7<>uid://c06dbeablwak7
-quest.tscn::PackedScene::1141011154324295791::1681305171::0::1::::<><>::res://scripts/quest.gd<>uid://c06dbeablwak7
-test.tscn::PackedScene::6636975649860590427::1681305231::0::1::::<><>::uid://ds55dbxdcsj44<>uid://ccbbv60q6xivw<>uid://djbq0cpgxh1mx<>uid://chskgg5ujg3j1<>uid://dsq4owtgtjt7y<>uid://cpmexju80asp4<>uid://b4upwhxfs7ris
-text.tscn::PackedScene::4584739765593742796::1681305171::0::1::::<><>::res://scripts/text.gd<>uid://c06dbeablwak7
-::res://scripts/::1681305071
-cs.gd::GDScript::-1::1681305071::0::1::::<>Node<>::
-enemy.gd::GDScript::-1::1681298291::0::1::::Enemy<>CharacterBody3D<>::
-g.gd::GDScript::-1::1681303795::0::1::::<>Node<>::
-letter.gd::GDScript::-1::1681301529::0::1::::<>Area3D<>::
+class_room.tscn::PackedScene::37124783901688907::1681469498::0::1::::<><>::uid://bj5265xqxkfm0<>res://scripts/player_rot.gd
+enemy.tscn::PackedScene::7794042266829960639::1681469499::0::1::::<><>::res://scripts/enemy.gd
+game.tscn::PackedScene::8533445729595830954::1681487004::0::1::::<><>::res://scripts/game.gd<>uid://c1taawj0ega1x<>uid://w46xp0lqsp7c
+letter.tscn::PackedScene::4915383318694367976::1681469499::0::1::::<><>::res://scripts/letter.gd<>uid://qiyj01s84nhv<>uid://ciy4vh6ur6okf
+pause.tscn::PackedScene::1605945641932278446::1681487034::0::1::::<><>::res://scripts/pause.gd<>uid://c06dbeablwak7<>uid://blwuly8pa6ouu<>uid://bfqcujw1260jp<>uid://bg8dp7sg84wu0<>uid://bn3h42deu742b<>uid://cn1t1bbswigu4
+player.tscn::PackedScene::8486419524543937515::1681469499::0::1::::<><>::res://scripts/player.gd<>uid://c6a546ai5mqqw<>uid://bxrap2nes65ur<>uid://dwjkgelbrhe70<>uid://04jdrlworcp<>uid://cajy30742d0a2<>uid://dkmehh4wkgbf0<>uid://bcg53mgc2nild<>uid://c0ieufn6uoqs7<>uid://c06dbeablwak7
+quest.tscn::PackedScene::1141011154324295791::1681469499::0::1::::<><>::res://scripts/quest.gd<>uid://c06dbeablwak7
+quest_template.tscn::PackedScene::7072696172126717415::1681472296::0::1::::<><>::uid://dxsm03vtgvbrf<>uid://c06dbeablwak7<>res://scripts/quest_template.gd
+test.tscn::PackedScene::6636975649860590427::1681472296::0::1::::<><>::uid://ds55dbxdcsj44<>uid://ccbbv60q6xivw<>uid://djbq0cpgxh1mx<>uid://chskgg5ujg3j1<>uid://dsq4owtgtjt7y<>uid://cpmexju80asp4<>uid://b4upwhxfs7ris
+text.tscn::PackedScene::4584739765593742796::1681469499::0::1::::<><>::res://scripts/text.gd<>uid://c06dbeablwak7
+::res://scripts/::1681473200
+cs.gd::GDScript::-1::1681464087::0::1::::<>Node<>::
+enemy.gd::GDScript::-1::1681462495::0::1::::Enemy<>CharacterBody3D<>::
+g.gd::GDScript::-1::1681472715::0::1::::<>Node<>::
+game.gd::GDScript::-1::1681472745::0::1::::<>Node<>::
+letter.gd::GDScript::-1::1681469425::0::1::::<>Area3D<>::
+pause.gd::GDScript::-1::1681473200::0::1::::<>CanvasLayer<>::
 player.gd::GDScript::-1::1681290006::0::1::::Player<>CharacterBody3D<>::
 player_rot.gd::GDScript::-1::1681113067::0::1::::<>CharacterBody3D<>::
-quest.gd::GDScript::-1::1681299078::0::1::::<>Control<>::
+q.gd::GDScript::-1::1681463930::0::1::::Q<>RefCounted<>::
+quest.gd::GDScript::-1::1681469129::0::1::::<>Control<>::
+quest_template.gd::GDScript::-1::1681466290::0::1::::<>Panel<>::
 text.gd::GDScript::-1::1681299332::0::1::::text_ivent<>Control<>::

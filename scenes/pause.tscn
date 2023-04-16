@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=3 uid="uid://w46xp0lqsp7c"]
+
+[ext_resource type="Script" path="res://scripts/pause.gd" id="1_gleyn"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="1_otcjc"]
+[ext_resource type="Texture2D" uid="uid://blwuly8pa6ouu" path="res://assets/PNG/UI/button/Button Disable.png" id="2_feujy"]
+[ext_resource type="Texture2D" uid="uid://bfqcujw1260jp" path="res://assets/PNG/UI/button/Button Hover.png" id="3_vevyc"]
+[ext_resource type="Texture2D" uid="uid://bg8dp7sg84wu0" path="res://assets/PNG/UI/button/Button Normal.png" id="4_no36u"]
+[ext_resource type="Texture2D" uid="uid://bn3h42deu742b" path="res://assets/PNG/UI/button/Button Active.png" id="5_r327e"]
+[ext_resource type="Texture2D" uid="uid://cn1t1bbswigu4" path="res://assets/PNG/UI/Card X5.png" id="6_w8fk4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n85ix"]
+texture = ExtResource("2_feujy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g0w7"]
+texture = ExtResource("3_vevyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75wyu"]
+texture = ExtResource("4_no36u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qf44"]
+texture = ExtResource("5_r327e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw7ns"]
+texture = ExtResource("6_w8fk4")
+
+[sub_resource type="Theme" id="Theme_5dpo7"]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_otcjc")
+Button/styles/disabled = SubResource("StyleBoxTexture_n85ix")
+Button/styles/hover = SubResource("StyleBoxTexture_8g0w7")
+Button/styles/normal = SubResource("StyleBoxTexture_75wyu")
+Button/styles/pressed = SubResource("StyleBoxTexture_1qf44")
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_otcjc")
+Panel/styles/panel = SubResource("StyleBoxTexture_rw7ns")
+
+[sub_resource type="InputEventAction" id="InputEventAction_da6ao"]
+action = &"pause"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_56lgs"]
+events = [SubResource("InputEventAction_da6ao")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_74ot7"]
+line_spacing = 50.0
+font = ExtResource("1_otcjc")
+font_size = 30
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_gleyn")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5dpo7")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 72.0
+offset_right = 1087.0
+offset_bottom = 137.0
+shortcut = SubResource("Shortcut_56lgs")
+shortcut_in_tooltip = false
+text = "Вернуться"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 176.0
+offset_right = 1087.0
+offset_bottom = 241.0
+text = "Настройки"
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 288.0
+offset_right = 1087.0
+offset_bottom = 353.0
+text = "Выйти"
+
+[node name="Control" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = 864.0
+offset_bottom = 576.0
+
+[node name="quest_container" type="VBoxContainer" parent="Panel/Control"]
+custom_minimum_size = Vector2(800, 60)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 68.0
+offset_top = 88.0
+offset_right = 836.0
+offset_bottom = 169.0
+text = "Не найдено принятых квестов"
+label_settings = SubResource("LabelSettings_74ot7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

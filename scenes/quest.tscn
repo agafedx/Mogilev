@@ -128,6 +128,6 @@ offset_bottom = 153.0
 label_settings = SubResource("LabelSettings_fea3l")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78161, 0.415751, -0.0988082
 curve = SubResource("Curve3D_q8ae7")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.721715, 0, 0.69219, 0, 1, 0, -0.69219, 0, 0.721715, 0.0204978, 2.0504e-05, 0.0394479)
+transform = Transform3D(0.721716, 0, 0.692189, 0, 1, 0, -0.692189, 0, 0.721716, 0.0204978, 2.0504e-05, 0.0394479)
 loop = false
 
 [node name="enemy" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
@@ -59,6 +59,46 @@ path_speed = 0.25
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
 
 [node name="Female_Standing" parent="Path3D/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(0.16293, 0, 0.986638, 0, 1, 0, -0.986638, 0, 0.16293, 8.22223, 0.415751, 1.4277)
+curve = SubResource("Curve3D_q8ae7")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(0.721716, 0, 0.692189, 0, 1, 0, -0.692189, 0, 0.721716, 0.0204978, 2.0504e-05, 0.0394479)
+loop = false
+
+[node name="enemy" parent="Path3D2/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.377391, 0)
+hp = 20.0
+path_follow = NodePath("..")
+path_speed = 0.25
+
+[node name="CollisionShape3D" parent="Path3D2/PathFollow3D/enemy" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
+
+[node name="Female_Standing" parent="Path3D2/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Path3D3" type="Path3D" parent="."]
+transform = Transform3D(-0.952081, 0, 0.305845, 0, 1, 0, -0.305845, 0, -0.952081, 7.56368, 0.415751, -4.30765)
+curve = SubResource("Curve3D_q8ae7")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D3"]
+transform = Transform3D(0.721716, 0, 0.692189, 0, 1, 0, -0.692189, 0, 0.721716, 0.0204978, 2.0504e-05, 0.0394479)
+loop = false
+
+[node name="enemy" parent="Path3D3/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.377391, 0)
+hp = 20.0
+path_follow = NodePath("..")
+path_speed = 0.25
+
+[node name="CollisionShape3D" parent="Path3D3/PathFollow3D/enemy" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
+
+[node name="Female_Standing" parent="Path3D3/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -90,12 +130,10 @@ size = Vector3(0.1, 1, 0.1)
 [node name="letter" parent="objects/table" instance=ExtResource("2_6c1ve")]
 is_text = true
 text = "абракадабра, алахакбар"
-q_text = "прими же квест таблички"
 
 [node name="letter" parent="objects" instance=ExtResource("2_6c1ve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406739, 0.810176, -2.86538)
 is_quest = true
-q_text = "Убей моба"
 
 [node name="Building1_Large" parent="." instance=ExtResource("5_j0y2x")]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.52393, 0.0499997, 6.43596)
@@ -106,5 +144,12 @@ transform = Transform3D(-2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 2.8046
 [node name="Building3_Big" parent="." instance=ExtResource("7_yjicx")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.066781, 0.0500002, -10.9542)
 
+[node name="letter" parent="." instance=ExtResource("2_6c1ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2184, 0.641722, 0)
+is_quest = true
+id = 1
+
 [editable path="Path3D/PathFollow3D/enemy"]
+[editable path="Path3D2/PathFollow3D/enemy"]
+[editable path="Path3D3/PathFollow3D/enemy"]
 [editable path="objects/letter"]

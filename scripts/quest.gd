@@ -1,11 +1,12 @@
 extends Control
-var quest_text : String
+var id : int
 var a : String = "Квест принят" 
 var num : int = 0
 var t : Timer
 var b : bool= false 
 func _ready():
-	$Panel/RichTextLabel.text = quest_text
+	$Panel/RichTextLabel.text = cs.q[id].text
+	$Panel/Label.text = cs.q[id].name
 	$AnimationPlayer.play("idle")
 	G.is_text_showing = true
 	G.is_quest_showing = true
@@ -19,6 +20,7 @@ func start():
 	t.timeout.connect(t_timeout)
 	add_child(t)
 	t.start()
+	cs.q[id].activate()
 func t_timeout():
 	if num<a.length():
 		$Label.text += a[num]
