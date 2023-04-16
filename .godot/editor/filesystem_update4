@@ -1,2 +1,3 @@
-res://scenes/game.tscn
 res://scenes/pause.tscn
+res://scenes/game.tscn
+res://scripts/pause.gd

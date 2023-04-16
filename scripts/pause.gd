@@ -19,13 +19,15 @@ func _on_button_3_pressed():
 
 
 func _on_visibility_changed():
+	
 	if q==null:
 		return 0
+	var skip : bool = false
 	for i in q.get_children():
 		i.queue_free()
 	for i in cs.q:
 			if i.is_active:
-				$Label.visible=false
+				skip = true
 				if i.is_killing:
 					var t = qt.instantiate()
 					t.set_text("%s %s/%s" %[i.name, G.killed_enemies[i.act_id], i.count])
@@ -34,7 +36,9 @@ func _on_visibility_changed():
 					var t = qt.instantiate()
 					t.set_text("%s %s" %[i.name, i.text])
 					q.add_child(t)
-			else:
+			if skip:
+				$Label.visible=false
+			elif !skip:
 				$Label.visible=true
 
 func _on_timer_timeout():
