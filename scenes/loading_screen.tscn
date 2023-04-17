@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1wl7yevlek2u"]
+
+[ext_resource type="Script" path="res://scripts/loading_screen.gd" id="1_lanni"]
+[ext_resource type="Texture2D" uid="uid://bg8dp7sg84wu0" path="res://assets/PNG/UI/button/Button Normal.png" id="2_u1vtj"]
+[ext_resource type="Texture2D" uid="uid://bn3h42deu742b" path="res://assets/PNG/UI/button/Button Active.png" id="3_7fri6"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="4_gsafv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkt6"]
+texture = ExtResource("2_u1vtj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_io2ot"]
+texture = ExtResource("3_7fri6")
+
+[sub_resource type="Theme" id="Theme_031oi"]
+ProgressBar/font_sizes/font_size = 20
+ProgressBar/styles/background = SubResource("StyleBoxTexture_nlkt6")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_io2ot")
+
+[node name="loading_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lanni")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_031oi")
+theme_override_fonts/font = ExtResource("4_gsafv")
+step = 1.0

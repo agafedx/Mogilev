@@ -8,31 +8,31 @@
 [ext_resource type="Texture2D" uid="uid://bn3h42deu742b" path="res://assets/PNG/UI/button/Button Active.png" id="5_r327e"]
 [ext_resource type="Texture2D" uid="uid://cn1t1bbswigu4" path="res://assets/PNG/UI/Card X5.png" id="6_w8fk4"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n85ix"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u3rif"]
 texture = ExtResource("2_feujy")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g0w7"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjv30"]
 texture = ExtResource("3_vevyc")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75wyu"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dt0ow"]
 texture = ExtResource("4_no36u")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qf44"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ir184"]
 texture = ExtResource("5_r327e")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw7ns"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23drj"]
 texture = ExtResource("6_w8fk4")
 
 [sub_resource type="Theme" id="Theme_5dpo7"]
 Button/font_sizes/font_size = 24
 Button/fonts/font = ExtResource("1_otcjc")
-Button/styles/disabled = SubResource("StyleBoxTexture_n85ix")
-Button/styles/hover = SubResource("StyleBoxTexture_8g0w7")
-Button/styles/normal = SubResource("StyleBoxTexture_75wyu")
-Button/styles/pressed = SubResource("StyleBoxTexture_1qf44")
+Button/styles/disabled = SubResource("StyleBoxTexture_u3rif")
+Button/styles/hover = SubResource("StyleBoxTexture_rjv30")
+Button/styles/normal = SubResource("StyleBoxTexture_dt0ow")
+Button/styles/pressed = SubResource("StyleBoxTexture_ir184")
 Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("1_otcjc")
-Panel/styles/panel = SubResource("StyleBoxTexture_rw7ns")
+Panel/styles/panel = SubResource("StyleBoxTexture_23drj")
 
 [sub_resource type="InputEventAction" id="InputEventAction_da6ao"]
 action = &"pause"

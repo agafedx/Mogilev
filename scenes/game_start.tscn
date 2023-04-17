@@ -1,0 +1,129 @@
+[gd_scene load_steps=16 format=3 uid="uid://gy1xr3iw8sds"]
+
+[ext_resource type="Script" path="res://scripts/game_start.gd" id="1_jmqbf"]
+[ext_resource type="Texture2D" uid="uid://cnaj242vjts7t" path="res://assets/PNG/UI/Card X6.png" id="1_ui6sb"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="2_au54l"]
+[ext_resource type="Texture2D" uid="uid://blwuly8pa6ouu" path="res://assets/PNG/UI/button/Button Disable.png" id="2_fxv72"]
+[ext_resource type="Texture2D" uid="uid://bn3h42deu742b" path="res://assets/PNG/UI/button/Button Active.png" id="3_5xgxd"]
+[ext_resource type="Texture2D" uid="uid://bfqcujw1260jp" path="res://assets/PNG/UI/button/Button Hover.png" id="4_5pig8"]
+[ext_resource type="Texture2D" uid="uid://bg8dp7sg84wu0" path="res://assets/PNG/UI/button/Button Normal.png" id="5_as10h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xv48"]
+texture = ExtResource("2_fxv72")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5kp63"]
+texture = ExtResource("3_5xgxd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6602j"]
+texture = ExtResource("4_5pig8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20va1"]
+texture = ExtResource("5_as10h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hkjfi"]
+texture = ExtResource("3_5xgxd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aaaio"]
+texture = ExtResource("1_ui6sb")
+modulate_color = Color(1, 1, 1, 0.67451)
+
+[sub_resource type="Theme" id="Theme_yw3y0"]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("2_au54l")
+Button/styles/disabled = SubResource("StyleBoxTexture_7xv48")
+Button/styles/focus = SubResource("StyleBoxTexture_5kp63")
+Button/styles/hover = SubResource("StyleBoxTexture_6602j")
+Button/styles/normal = SubResource("StyleBoxTexture_20va1")
+Button/styles/pressed = SubResource("StyleBoxTexture_hkjfi")
+Panel/styles/panel = SubResource("StyleBoxTexture_aaaio")
+
+[sub_resource type="LabelSettings" id="LabelSettings_15dsl"]
+font = ExtResource("2_au54l")
+font_size = 40
+
+[node name="game_start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jmqbf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -112.0
+offset_right = 72.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_yw3y0")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 136.0
+offset_right = 155.0
+offset_bottom = 224.0
+grow_horizontal = 2
+text = "21 день защиты 
+Могилёва"
+label_settings = SubResource("LabelSettings_15dsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -108.0
+offset_right = 120.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Начать игру"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Настройки"
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 148.0
+offset_right = 120.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Выйти"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]

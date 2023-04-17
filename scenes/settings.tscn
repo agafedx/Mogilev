@@ -1,0 +1,190 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqxipjpfq5dd4"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_4sxgc"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="1_a5cki"]
+[ext_resource type="Texture2D" uid="uid://blwuly8pa6ouu" path="res://assets/PNG/UI/button/Button Disable.png" id="2_82j1l"]
+[ext_resource type="Texture2D" uid="uid://bfqcujw1260jp" path="res://assets/PNG/UI/button/Button Hover.png" id="3_cw8xn"]
+[ext_resource type="Texture2D" uid="uid://bg8dp7sg84wu0" path="res://assets/PNG/UI/button/Button Normal.png" id="4_swtx7"]
+[ext_resource type="Texture2D" uid="uid://bn3h42deu742b" path="res://assets/PNG/UI/button/Button Active.png" id="5_we6aa"]
+[ext_resource type="Texture2D" uid="uid://cn1t1bbswigu4" path="res://assets/PNG/UI/Card X5.png" id="6_6d8ia"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n85ix"]
+texture = ExtResource("2_82j1l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g0w7"]
+texture = ExtResource("3_cw8xn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75wyu"]
+texture = ExtResource("4_swtx7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qf44"]
+texture = ExtResource("5_we6aa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw7ns"]
+texture = ExtResource("6_6d8ia")
+
+[sub_resource type="Theme" id="Theme_30fjg"]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_a5cki")
+Button/styles/disabled = SubResource("StyleBoxTexture_n85ix")
+Button/styles/hover = SubResource("StyleBoxTexture_8g0w7")
+Button/styles/normal = SubResource("StyleBoxTexture_75wyu")
+Button/styles/pressed = SubResource("StyleBoxTexture_1qf44")
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_a5cki")
+Panel/styles/panel = SubResource("StyleBoxTexture_rw7ns")
+
+[sub_resource type="InputEventAction" id="InputEventAction_tqi67"]
+action = &"pause"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_qbhxi"]
+events = [SubResource("InputEventAction_tqi67")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m0im4"]
+font = ExtResource("1_a5cki")
+font_size = 20
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4sxgc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_30fjg")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 104.0
+shortcut = SubResource("Shortcut_qbhxi")
+text = "Назад"
+
+[node name="HSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 304.0
+offset_right = 960.0
+offset_bottom = 320.0
+
+[node name="HSlider2" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 368.0
+offset_right = 960.0
+offset_bottom = 384.0
+
+[node name="HSlider3" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 432.0
+offset_right = 960.0
+offset_bottom = 448.0
+
+[node name="CheckBox" type="CheckBox" parent="Panel"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 256.0
+
+[node name="CheckBox2" type="CheckBox" parent="Panel"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 240.0
+offset_right = 592.0
+offset_bottom = 256.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 152.0
+offset_right = 515.0
+offset_bottom = 192.0
+
+[node name="OptionButton" type="OptionButton" parent="Panel/HBoxContainer"]
+layout_mode = 2
+item_count = 4
+selected = 3
+popup/item_0/text = "640x360"
+popup/item_0/id = 0
+popup/item_1/text = "1280x720"
+popup/item_1/id = 1
+popup/item_2/text = "1600x900"
+popup/item_2/id = 2
+popup/item_3/text = "1920x1080"
+popup/item_3/id = 3
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 240.0
+offset_right = 359.0
+offset_bottom = 264.0
+text = "Полноэкранный режим"
+label_settings = SubResource("LabelSettings_m0im4")
+
+[node name="Label6" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 240.0
+offset_right = 552.0
+offset_bottom = 264.0
+text = "VSync"
+label_settings = SubResource("LabelSettings_m0im4")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 304.0
+offset_right = 359.0
+offset_bottom = 328.0
+text = "Громкость звука"
+label_settings = SubResource("LabelSettings_m0im4")
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 368.0
+offset_right = 359.0
+offset_bottom = 392.0
+text = "Громкость музыки"
+label_settings = SubResource("LabelSettings_m0im4")
+
+[node name="Label5" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 432.0
+offset_right = 359.0
+offset_bottom = 456.0
+text = "Чувствительность мыши"
+label_settings = SubResource("LabelSettings_m0im4")
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 176.0
+offset_right = 359.0
+offset_bottom = 200.0
+text = "Разрешение экрана"
+label_settings = SubResource("LabelSettings_m0im4")
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Panel/HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="Panel/HSlider3" to="." method="_on_h_slider_3_value_changed"]
+[connection signal="toggled" from="Panel/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Panel/CheckBox2" to="." method="_on_check_box_2_toggled"]
+[connection signal="item_selected" from="Panel/HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
