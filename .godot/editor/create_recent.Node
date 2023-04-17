@@ -1,3 +1,4 @@
+Button
 OptionButton
 HBoxContainer
 Label
@@ -5,7 +6,6 @@ MenuButton
 CheckBox
 HSlider
 HScrollBar
-Button
 Panel
 PopupPanel
 Popup
@@ -30,4 +30,3 @@ RichTextLabel
 CSGBox3D
 Area3D
 CSGCylinder3D
-Node3D

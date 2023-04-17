@@ -1,5 +1,5 @@
 extends CharacterBody3D
-var look_sens = G.mouse_sens
+var look_sens = G.mouse_sens * 0.01
 @onready var head = $head
 @onready var cam = $head/Camera3D
 var camx : float

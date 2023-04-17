@@ -2,12 +2,12 @@ extends Node
 
 var mouse_sens : float = 1.0
 var resolution = {
-1:Vector2(640,360),
-2:Vector2(1280,720),
-3:Vector2(1600,900),
-4:Vector2(1920,1080)}
+0:Vector2(640,360),
+1:Vector2(1280,720),
+2:Vector2(1600,900),
+3:Vector2(1920,1080)}
 var current_resolution : Vector2 = resolution[1]
-var is_fullscreen : bool = true
+var is_fullscreen : bool = false
 var is_vsync : bool = true 
 
 
@@ -50,14 +50,17 @@ func change_scene(path: String, params := []):
 			else: printerr("No such scene: ", path)
 
 func update_settings():
+	print("fs:%s sync:%s "%[is_fullscreen, is_vsync])
+	
 	if is_fullscreen:
-		DisplayServer.WINDOW_MODE_FULLSCREEN
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		current_resolution = G.resolution[3]
 	else:
-		DisplayServer.WINDOW_MODE_WINDOWED
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	#get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_2D, SceneTree.STRETCH_ASPECT_KEEP, G.current_resolution)
 	DisplayServer.window_set_size(G.current_resolution)
 	if is_vsync:
-		DisplayServer.VSYNC_ENABLED
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
-		DisplayServer.VSYNC_DISABLED
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)		
 	

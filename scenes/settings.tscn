@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cqxipjpfq5dd4"]
+[gd_scene load_steps=19 format=3 uid="uid://cqxipjpfq5dd4"]
 
 [ext_resource type="Script" path="res://scripts/settings.gd" id="1_4sxgc"]
 [ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="1_a5cki"]
@@ -44,6 +44,13 @@ events = [SubResource("InputEventAction_tqi67")]
 [sub_resource type="LabelSettings" id="LabelSettings_m0im4"]
 font = ExtResource("1_a5cki")
 font_size = 20
+
+[sub_resource type="InputEventAction" id="InputEventAction_3vg8o"]
+action = &"ui_accept"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_k8ouo"]
+events = [SubResource("InputEventAction_3vg8o")]
 
 [node name="settings" type="Control"]
 layout_mode = 3
@@ -181,6 +188,16 @@ offset_bottom = 200.0
 text = "Разрешение экрана"
 label_settings = SubResource("LabelSettings_m0im4")
 
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 512.0
+offset_right = 640.0
+offset_bottom = 576.0
+shortcut = SubResource("Shortcut_k8ouo")
+text = "Принять
+"
+
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="Panel/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="Panel/HSlider2" to="." method="_on_h_slider_2_value_changed"]
@@ -188,3 +205,4 @@ label_settings = SubResource("LabelSettings_m0im4")
 [connection signal="toggled" from="Panel/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="toggled" from="Panel/CheckBox2" to="." method="_on_check_box_2_toggled"]
 [connection signal="item_selected" from="Panel/HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

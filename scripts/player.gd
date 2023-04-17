@@ -1,6 +1,6 @@
 class_name Player
 extends CharacterBody3D
-var look_sens = G.mouse_sens
+var look_sens = G.mouse_sens * 0.01
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") 
 var is_sprinting : bool = false
 @export var speed : float = 3.5

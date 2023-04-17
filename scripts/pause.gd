@@ -12,7 +12,8 @@ func _on_button_pressed():
 	print(G.can_pause)
 	
 func _on_button_2_pressed():
-	pass # Replace with function body.
+	var x = load("res://scenes/settings.tscn").instantiate() 
+	add_child(x)
 
 func _on_button_3_pressed():
 	get_tree().quit()

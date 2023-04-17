@@ -1,0 +1,14 @@
+res://scenes/animated_pistol.tscn::691ef62500b6e03ae420e033c044df06::1681217627::res://.godot/exported/133200997/export-5b197294c3e5ebd0be4dbc807fe2330a-animated_pistol.scn
+res://scenes/class_room.tscn::4d8449eb13599ab60405ebaef9199cdc::1681469498::res://.godot/exported/133200997/export-caf519684da494ad4d92cfbed83d1899-class_room.scn
+res://scenes/enemy.tscn::d1f64b8f1dc962d437d7067424104f01::1681469499::res://.godot/exported/133200997/export-a930820ec0ab16db6719aff4daa500f9-enemy.scn
+res://scenes/game.tscn::dbeb1f8fc1ac52a9bf3dda82228f4700::1681763799::res://.godot/exported/133200997/export-c2a7af834e91ff64325daddf58e45dc0-game.scn
+res://scenes/game_start.tscn::55069bbe3de4b9574dc2fa3dc417f512::1681763799::res://.godot/exported/133200997/export-145457da410566042ac7eeae54d91d9d-game_start.scn
+res://scenes/letter.tscn::102f7ed5ffdd67e0248f899c9615882d::1681729151::res://.godot/exported/133200997/export-8ee991380fafe14272176b69f7c43940-letter.scn
+res://scenes/loading_screen.tscn::e673cfa341c795985229f273f23568c5::1681763799::res://.godot/exported/133200997/export-1e707b022a70ca8796c92eea804c0b29-loading_screen.scn
+res://scenes/pause.tscn::4d122d82edd0e215f4e5ed3b9df85bd6::1681763799::res://.godot/exported/133200997/export-877dd510dd31eb0f29670ab72328164d-pause.scn
+res://scenes/player.tscn::91c5b71b7340f72ec3e8285ba4e44fde::1681755489::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/quest.tscn::57bf6a4865ca848a71520744477b0d9f::1681763799::res://.godot/exported/133200997/export-81e8f5c8d4a593d7dfd44f524bc6f9d2-quest.scn
+res://scenes/quest_template.tscn::e70b66e6863ee66b5654c811e878f365::1681472296::res://.godot/exported/133200997/export-b681c479ae85dbd2fb7c6aef293dcecc-quest_template.scn
+res://scenes/settings.tscn::831fd5b25fcd3648ac0fa3da10b6da41::1681763835::res://.godot/exported/133200997/export-7416c78d345eded4b396246a6c8adbe0-settings.scn
+res://scenes/test.tscn::a8d0d5fb78a0a3fc1014c56824859675::1681472296::res://.godot/exported/133200997/export-a8ffa8455ee75708b6c34cd8d7888dc7-test.scn
+res://scenes/text.tscn::bb5879b2a9d1480d854af47d32cac733::1681469499::res://.godot/exported/133200997/export-c6242afae5a0a690d2f9ef1203908656-text.scn
