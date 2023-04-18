@@ -6,10 +6,9 @@ var resolution = {
 1:Vector2(1280,720),
 2:Vector2(1600,900),
 3:Vector2(1920,1080)}
-var current_resolution : Vector2 = resolution[1]
+var current_resolution : Vector2 = resolution[3]
 var is_fullscreen : bool = false
 var is_vsync : bool = true 
-
 
 var is_text_showing : bool = false
 var is_quest_showing : bool = false
@@ -50,8 +49,6 @@ func change_scene(path: String, params := []):
 			else: printerr("No such scene: ", path)
 
 func update_settings():
-	print("fs:%s sync:%s "%[is_fullscreen, is_vsync])
-	
 	if is_fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		current_resolution = G.resolution[3]
@@ -62,5 +59,8 @@ func update_settings():
 	if is_vsync:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)		
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	var screen_size = DisplayServer.screen_get_size()
+	var window_size = DisplayServer.window_get_size()
+	DisplayServer.window_set_position(screen_size*0.5 - window_size*0.5)
 	

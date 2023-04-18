@@ -6,7 +6,6 @@ var scene_load_status = 0
 var started : bool = false
 
 func init(params = ["res://scenes/game.tscn"]):
-	print(params)
 	scene = params[0]
 
 func _process(_delta):

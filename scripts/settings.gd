@@ -30,6 +30,7 @@ func _on_check_box_toggled(button_pressed):
 	G.is_fullscreen = button_pressed
 	if G.is_fullscreen:
 		$Panel/HBoxContainer/OptionButton.disabled = true
+		$Panel/HBoxContainer/OptionButton.selected = 3
 	else:
 		$Panel/HBoxContainer/OptionButton.disabled = false
 

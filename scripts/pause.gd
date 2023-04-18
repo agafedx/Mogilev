@@ -8,8 +8,6 @@ func _on_button_pressed():
 	get_tree().paused = false
 	visible=false
 	$Timer.start()
-	print("x")
-	print(G.can_pause)
 	
 func _on_button_2_pressed():
 	var x = load("res://scenes/settings.tscn").instantiate() 
@@ -44,4 +42,3 @@ func _on_visibility_changed():
 
 func _on_timer_timeout():
 	G.can_pause=true
-	print("change")

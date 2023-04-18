@@ -1,13 +1,10 @@
-res://scenes/settings.tscn
-res://scripts/settings.gd
-res://scenes/game_start.tscn
-res://scripts/game_start.gd
 res://scenes/game.tscn
 res://scenes/pause.tscn
 res://scenes/quest.tscn
-res://scenes/player.tscn
+res://scenes/game_start.tscn
 res://scenes/loading_screen.tscn
-res://scripts/player.gd
-res://scripts/player_rot.gd
+res://scenes/settings.tscn
 res://scripts/g.gd
+res://scripts/loading_screen.gd
 res://scripts/pause.gd
+res://scripts/settings.gd
