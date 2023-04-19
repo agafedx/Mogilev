@@ -1,0 +1,69 @@
+[gd_scene load_steps=13 format=3 uid="uid://bcvt4bb1i0bae"]
+
+[ext_resource type="PackedScene" uid="uid://dsq4owtgtjt7y" path="res://assets/models/buildings/Building1_Large.glb" id="1_o5oe6"]
+[ext_resource type="PackedScene" uid="uid://cpmexju80asp4" path="res://assets/models/buildings/Building1_Small.glb" id="2_6c4yu"]
+[ext_resource type="PackedScene" uid="uid://cy7s0k6sxxuur" path="res://assets/models/buildings/Building2_Large.glb" id="3_txrl3"]
+[ext_resource type="PackedScene" uid="uid://d053t0wlfj64o" path="res://assets/models/buildings/Building2_Small.glb" id="4_4naxt"]
+[ext_resource type="PackedScene" uid="uid://b4upwhxfs7ris" path="res://assets/models/buildings/Building3_Big.glb" id="5_tcfkc"]
+[ext_resource type="PackedScene" uid="uid://b6oc2nel5wgdp" path="res://assets/models/buildings/Building3_Small.glb" id="6_vdvai"]
+[ext_resource type="PackedScene" uid="uid://p75mttnhfmy5" path="res://assets/models/buildings/Building4.glb" id="7_ed125"]
+[ext_resource type="PackedScene" uid="uid://ds55dbxdcsj44" path="res://scenes/player.tscn" id="9_eovd8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nl3sp"]
+sky_top_color = Color(0.454902, 0.529412, 0.627451, 1)
+sky_curve = 0.252269
+ground_bottom_color = Color(0.2, 0.168627, 0.133333, 1)
+sun_angle_max = 43.33
+sun_curve = 0.289781
+
+[sub_resource type="Sky" id="Sky_awhmq"]
+sky_material = SubResource("ProceduralSkyMaterial_nl3sp")
+
+[sub_resource type="Environment" id="Environment_nkxi4"]
+background_mode = 2
+sky = SubResource("Sky_awhmq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8uy61"]
+albedo_color = Color(0.380392, 0.380392, 0.380392, 1)
+
+[node name="level_1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nkxi4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.894154, -0.387771, 0.22388, 0, 0.5, 0.866025, -0.447759, 0.77436, -0.447077, 0, 2.51786, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100, 0.1, 100)
+
+[node name="road" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+size = Vector3(10, 0.01, 5)
+material = SubResource("StandardMaterial3D_8uy61")
+
+[node name="Building1_Large" parent="." instance=ExtResource("1_o5oe6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52061, 0.0500011, 12.6804)
+
+[node name="Building1_Small" parent="." instance=ExtResource("2_6c4yu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.588, 0.0500011, 12.6804)
+
+[node name="Building2_Large" parent="." instance=ExtResource("3_txrl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30628, 0.0500011, 1.98644)
+
+[node name="Building2_Small" parent="." instance=ExtResource("4_4naxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30628, 0.0500011, 18.6813)
+
+[node name="Building3_Big" parent="." instance=ExtResource("5_tcfkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7979, 0.0500011, 12.6804)
+
+[node name="Building3_Small" parent="." instance=ExtResource("6_vdvai")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42794, 0.0500011, 6.92127)
+
+[node name="Building4" parent="." instance=ExtResource("7_ed125")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30628, 0.0500011, 10.9596)
+
+[node name="player" parent="." instance=ExtResource("9_eovd8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71248, 0)

@@ -1,7 +1,10 @@
+Label
+Camera3D
+CSGBox3D
+Node
 Button
 OptionButton
 HBoxContainer
-Label
 MenuButton
 CheckBox
 HSlider
@@ -15,7 +18,6 @@ Timer
 Control
 PanelContainer
 VBoxContainer
-Node
 CanvasLayer
 Sprite3D
 MeshInstance3D
@@ -27,6 +29,4 @@ RayCast3D
 AnimationTree
 AnimationPlayer
 RichTextLabel
-CSGBox3D
 Area3D
-CSGCylinder3D

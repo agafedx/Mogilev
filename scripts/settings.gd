@@ -43,5 +43,4 @@ func _on_check_box_2_toggled(button_pressed):
 	G.is_vsync = button_pressed
 
 func _on_button_2_pressed():
-	print("x")
 	G.update_settings()

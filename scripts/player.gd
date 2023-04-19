@@ -48,7 +48,7 @@ func _input(event):
 		rotation.y -=event.relative.x * look_sens
 		cam.rotation.x -= event.relative.y * look_sens
 		cam.rotation.x = clamp(cam.rotation.x, deg_to_rad(-80), deg_to_rad(90))
-
+	$Control/Label.text = "FPS: %s"%[Engine.get_frames_per_second()]
 func fire():
 	G.bullets -= 1
 	$Control/Panel/Label.text = str(G.bullets)+"/"+str(G.max_bullets)

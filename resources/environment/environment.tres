@@ -1,0 +1,46 @@
+[gd_resource type="Environment" load_steps=8 format=3 uid="uid://5g65p5mp1whn"]
+
+[ext_resource type="Shader" path="res://resources/environment/level_1.gdshader" id="1_ld0rj"]
+[ext_resource type="Texture2D" uid="uid://b8i7hrsyi7iai" path="res://assets/1edited.png" id="2_lkgj4"]
+[ext_resource type="Texture2D" uid="uid://dv06g6v2fq8ov" path="res://assets/noise.png" id="3_6yetv"]
+[ext_resource type="Texture2D" uid="uid://dla80ifo63t6t" path="res://assets/1.jpg" id="3_ubyww"]
+[ext_resource type="Texture2D" uid="uid://hqswo2q8qxuh" path="res://assets/start.jpg" id="5_yseed"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_epb3k"]
+shader = ExtResource("1_ld0rj")
+shader_parameter/day_bottom_color = Color(0, 0.74902, 0.937255, 1)
+shader_parameter/day_top_color = Color(0, 0.537255, 0.67451, 1)
+shader_parameter/sunset_bottom_color = Color(0.45098, 0.192157, 0, 1)
+shader_parameter/sunset_top_color = Color(0.00784314, 0.156863, 0.231373, 1)
+shader_parameter/night_bottom_color = Color(0.121569, 0, 0.203922, 1)
+shader_parameter/night_top_color = Color(0, 0, 0, 1)
+shader_parameter/horizon_color_day = Color(0, 0.717647, 0.239216, 1)
+shader_parameter/horizon_color_sunset = Color(0.941176, 0.0705882, 0, 1)
+shader_parameter/horizon_color_night = Color(0.121569, 0, 0.203922, 1)
+shader_parameter/horizon_falloff = 0.7
+shader_parameter/sun_col = Color(1, 1, 1, 1)
+shader_parameter/sun_size = 0.15
+shader_parameter/sun_blur = 0.01
+shader_parameter/moon_col = Color(1, 1, 1, 1)
+shader_parameter/moon_size = 0.15
+shader_parameter/moon_crescent_offset = -0.1
+shader_parameter/clouds_main_color = Color(0.654902, 0.654902, 0.654902, 1)
+shader_parameter/clouds_edge_color = Color(0.113725, 0, 0.588235, 1)
+shader_parameter/clouds_speed = 0.08
+shader_parameter/clouds_scale = 0.79
+shader_parameter/clouds_cutoff = 0.0
+shader_parameter/clouds_fuzziness = 0.24
+shader_parameter/stars_cutoff = 0.925
+shader_parameter/stars_speed = 0.014
+shader_parameter/clouds_texture = ExtResource("3_ubyww")
+shader_parameter/clouds_distort_texture = ExtResource("2_lkgj4")
+shader_parameter/clouds_noise_texture = ExtResource("3_6yetv")
+shader_parameter/stars_texture = ExtResource("5_yseed")
+
+[sub_resource type="Sky" id="Sky_8dklu"]
+sky_material = SubResource("ShaderMaterial_epb3k")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_8dklu")
+ssao_enabled = true

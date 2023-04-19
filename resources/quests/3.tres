@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Q" load_steps=2 format=3 uid="uid://o1i0cisqgkod"]
+
+[ext_resource type="Script" path="res://scripts/q.gd" id="1_lgy2f"]
+
+[resource]
+script = ExtResource("1_lgy2f")
+name = "Убийца богов"
+text = "Собери диван на камиллу"
+act_id = 1
+count = 0
+is_active = false
+is_killing = false
+is_collecting = true

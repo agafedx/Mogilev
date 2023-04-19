@@ -1,6 +1,5 @@
 extends Node
-var q = [Q.new("Убейте 3 ниг","text1",0, true, false, 3),
-		Q.new("Собери лут","Собери лут, выпавший с 3 ниг", 1, false, true)]
+@export var q : Array[Resource] 
 func _ready():
 	if q !=[]:
 		for i in q:

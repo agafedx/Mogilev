@@ -4,7 +4,5 @@ res://scenes/quest.tscn
 res://scenes/game_start.tscn
 res://scenes/loading_screen.tscn
 res://scenes/settings.tscn
-res://scripts/g.gd
-res://scripts/loading_screen.gd
-res://scripts/pause.gd
-res://scripts/settings.gd
+res://scenes/levels/level_1.tscn
+res://scenes/player.tscn

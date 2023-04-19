@@ -16,7 +16,6 @@ func _on_button_2_pressed():
 func _on_button_3_pressed():
 	get_tree().quit()
 
-
 func _on_visibility_changed():
 	
 	if q==null:
@@ -29,11 +28,11 @@ func _on_visibility_changed():
 				skip = true
 				if i.is_killing:
 					var t = qt.instantiate()
-					t.set_text("%s %s/%s" %[i.name, G.killed_enemies[i.act_id], i.count])
+					t.set_text("%s |%s %s/%s|" %[i.name, i.text, G.killed_enemies[i.act_id], i.count])
 					q.add_child(t)
 				else:
 					var t = qt.instantiate()
-					t.set_text("%s %s" %[i.name, i.text])
+					t.set_text("%s |%s" %[i.name, i.text])
 					q.add_child(t)
 			if skip:
 				$Label.visible=false
