@@ -1,19 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1taawj0ega1x"]
+[gd_scene load_steps=12 format=3 uid="uid://c1taawj0ega1x"]
 
 [ext_resource type="PackedScene" uid="uid://ds55dbxdcsj44" path="res://scenes/player.tscn" id="1_ghewn"]
 [ext_resource type="PackedScene" uid="uid://ccbbv60q6xivw" path="res://scenes/letter.tscn" id="2_6c1ve"]
 [ext_resource type="PackedScene" uid="uid://djbq0cpgxh1mx" path="res://scenes/enemy.tscn" id="3_52r0l"]
-[ext_resource type="PackedScene" uid="uid://chskgg5ujg3j1" path="res://assets/models/characters/Female_Standing.glb" id="4_xsym7"]
 [ext_resource type="PackedScene" uid="uid://dsq4owtgtjt7y" path="res://assets/models/buildings/Building1_Large.glb" id="5_j0y2x"]
 [ext_resource type="PackedScene" uid="uid://cpmexju80asp4" path="res://assets/models/buildings/Building1_Small.glb" id="6_apjgc"]
 [ext_resource type="PackedScene" uid="uid://b4upwhxfs7ris" path="res://assets/models/buildings/Building3_Big.glb" id="7_yjicx"]
-
-[sub_resource type="Curve3D" id="Curve3D_q8ae7"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.0204978, 2.0504e-05, 0.0394479, 0, 0, 0, 0, 0, 0, 0.945435, 2.0504e-05, 1.00384, 0, 0, 0, 0, 0, 0, 1.91421, 2.0504e-05, 2.51618),
-"tilts": PackedFloat32Array(0, 0, 0)
-}
-point_count = 3
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7skge"]
 sky_top_color = Color(0.584314, 0.65098, 0.745098, 1)
@@ -39,67 +31,14 @@ glow_bloom = 0.1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qltn2"]
 albedo_color = Color(0, 0.713726, 0.294118, 1)
 
+[sub_resource type="Curve3D" id="Curve3D_g3k41"]
+_data = {
+"points": PackedVector3Array(-5, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 4, 0, 2, 0, 0, 0, 0, 0, 0, 6, 0, 1),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
 [node name="test" type="Node3D"]
-
-[node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78161, 0.415751, -0.0988082)
-curve = SubResource("Curve3D_q8ae7")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.721716, 0, 0.692189, 0, 1, 0, -0.692189, 0, 0.721716, 0.0204978, 2.0504e-05, 0.0394479)
-loop = false
-
-[node name="enemy" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.377391, 0)
-hp = 20.0
-path_follow = NodePath("..")
-path_speed = 0.25
-
-[node name="CollisionShape3D" parent="Path3D/PathFollow3D/enemy" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
-
-[node name="Female_Standing" parent="Path3D/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-
-[node name="Path3D2" type="Path3D" parent="."]
-transform = Transform3D(0.16293, 0, 0.986638, 0, 1, 0, -0.986638, 0, 0.16293, 8.22223, 0.415751, 1.4277)
-curve = SubResource("Curve3D_q8ae7")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(0.721716, 0, 0.692189, 0, 1, 0, -0.692189, 0, 0.721716, 0.0204978, 2.0504e-05, 0.0394479)
-loop = false
-
-[node name="enemy" parent="Path3D2/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.377391, 0)
-hp = 20.0
-path_follow = NodePath("..")
-path_speed = 0.25
-
-[node name="CollisionShape3D" parent="Path3D2/PathFollow3D/enemy" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
-
-[node name="Female_Standing" parent="Path3D2/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-
-[node name="Path3D3" type="Path3D" parent="."]
-transform = Transform3D(-0.952081, 0, 0.305845, 0, 1, 0, -0.305845, 0, -0.952081, 7.56368, 0.415751, -4.30765)
-curve = SubResource("Curve3D_q8ae7")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D3"]
-transform = Transform3D(0.721716, 0, 0.692189, 0, 1, 0, -0.692189, 0, 0.721716, 0.0204978, 2.0504e-05, 0.0394479)
-loop = false
-
-[node name="enemy" parent="Path3D3/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.377391, 0)
-hp = 20.0
-path_follow = NodePath("..")
-path_speed = 0.25
-
-[node name="CollisionShape3D" parent="Path3D3/PathFollow3D/enemy" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808797, 0)
-
-[node name="Female_Standing" parent="Path3D3/PathFollow3D/enemy" instance=ExtResource("4_xsym7")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.894154, -0.177827, 0.410933, 0, 0.917755, 0.397148, -0.447759, 0.355111, -0.820614, 0, 0, 0)
@@ -128,12 +67,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.460959, 0)
 size = Vector3(0.1, 1, 0.1)
 
 [node name="letter" parent="objects/table" instance=ExtResource("2_6c1ve")]
-is_text = true
-text = "абракадабра, алахакбар"
+_t_is_text = true
+_t_text = "Бла бла, Бла бла бла бла, Бла бла бла бла, Бла бла бла"
 
 [node name="letter" parent="objects" instance=ExtResource("2_6c1ve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406739, 0.810176, -2.86538)
-is_quest = true
+_q_is_quest = true
 
 [node name="Building1_Large" parent="." instance=ExtResource("5_j0y2x")]
 transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -8.52393, 0.0499997, 6.43596)
@@ -146,10 +85,38 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.066781, 0.0500002, -10.954
 
 [node name="letter" parent="." instance=ExtResource("2_6c1ve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2184, 0.641722, 0)
-is_quest = true
-id = 1
 
-[editable path="Path3D/PathFollow3D/enemy"]
-[editable path="Path3D2/PathFollow3D/enemy"]
-[editable path="Path3D3/PathFollow3D/enemy"]
+[node name="Path3D3" type="Path3D" parent="."]
+transform = Transform3D(-0.223897, 0, -0.974613, 0, 1, 0, 0.974613, 0, -0.223897, 11.5691, 0, 6.13756)
+curve = SubResource("Curve3D_g3k41")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D3"]
+transform = Transform3D(-4.37112e-08, 0, 0.999995, 0, 1, 0, -0.999995, 0, -4.37112e-08, 0, 0, 0)
+
+[node name="enemy" parent="Path3D3/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
+transform = Transform3D(-4.47035e-08, 0, -1.00001, 0, 1, 0, 1.00001, 0, -4.47035e-08, 0, 0.812658, 0)
+path_follow = NodePath("..")
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(0.496822, 0, 0.867852, 0, 1, 0, -0.867852, 0, 0.496822, 8.81732, 0, -6.36899)
+curve = SubResource("Curve3D_g3k41")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-4.37112e-08, 0, 0.999997, 0, 1, 0, -0.999997, 0, -4.37112e-08, 0, 0, 0)
+
+[node name="enemy2" parent="Path3D2/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
+transform = Transform3D(0.954629, 0, -0.297809, 0, 1, 0, 0.297809, 0, 0.954629, 0, 0.646835, 0)
+path_follow = NodePath("..")
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5691, 0, 0)
+curve = SubResource("Curve3D_g3k41")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37112e-08, 0, 0.999997, 0, 1, 0, -0.999997, 0, -4.37112e-08, 0, 0, 0)
+
+[node name="enemy3" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("3_52r0l")]
+transform = Transform3D(0.998581, 0, -0.0533122, 0, 1, 0, 0.0533122, 0, 0.998581, 0, 0.848213, 0)
+path_follow = NodePath("..")
+
 [editable path="objects/letter"]

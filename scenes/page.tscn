@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=3 uid="uid://b3kwu0ynynou7"]
+
+[ext_resource type="Script" path="res://scripts/page.gd" id="1_n5xmi"]
+[ext_resource type="Texture2D" uid="uid://d3p777yp2c704" path="res://assets/PNG/game_objects/pagex.png" id="2_lk3l2"]
+[ext_resource type="FontFile" uid="uid://c06dbeablwak7" path="res://assets/font1.ttf" id="3_dm4eg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3j7wk"]
+texture = ExtResource("2_lk3l2")
+
+[sub_resource type="Theme" id="Theme_patlh"]
+Panel/styles/panel = SubResource("StyleBoxTexture_3j7wk")
+RichTextLabel/colors/default_color = Color(0.235294, 0.235294, 0.235294, 1)
+RichTextLabel/font_sizes/normal_font_size = 20
+RichTextLabel/fonts/normal_font = ExtResource("3_dm4eg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8s7xs"]
+font = ExtResource("3_dm4eg")
+font_size = 32
+font_color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jnker"]
+font = ExtResource("3_dm4eg")
+font_size = 26
+font_color = Color(0.235294, 0.235294, 0.235294, 1)
+
+[sub_resource type="Animation" id="Animation_hewrn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q3qy7"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Label2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6g6jb"]
+_data = {
+"RESET": SubResource("Animation_hewrn"),
+"idle": SubResource("Animation_q3qy7")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_fea3l"]
+font = ExtResource("3_dm4eg")
+font_size = 44
+
+[node name="page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n5xmi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.158951
+anchor_right = 0.805556
+anchor_bottom = 0.865741
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_patlh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 48.9998
+offset_right = 544.0
+offset_bottom = 84.9998
+text = "Заголовок"
+label_settings = SubResource("LabelSettings_8s7xs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 345.0
+offset_right = 415.0
+offset_bottom = 409.0
+text = "Нажмите E,
+чтобы закрыть"
+label_settings = SubResource("LabelSettings_jnker")
+horizontal_alignment = 1
+
+[node name="Label3" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 97.0
+offset_right = 544.0
+offset_bottom = 321.0
+text = "asdasdasdas"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6g6jb")
+}
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 105.0
+offset_right = 752.0
+offset_bottom = 153.0
+label_settings = SubResource("LabelSettings_fea3l")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]

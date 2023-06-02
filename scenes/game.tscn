@@ -1,14 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dttwusx50n1jy"]
+[gd_scene load_steps=3 format=3 uid="uid://dttwusx50n1jy"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_n6m1e"]
-[ext_resource type="PackedScene" uid="uid://c1taawj0ega1x" path="res://scenes/test.tscn" id="2_acn18"]
 [ext_resource type="PackedScene" uid="uid://w46xp0lqsp7c" path="res://scenes/pause.tscn" id="3_42lth"]
 
 [node name="Game" type="Node"]
 process_mode = 1
 script = ExtResource("1_n6m1e")
-
-[node name="test" parent="." instance=ExtResource("2_acn18")]
 
 [node name="Pause" parent="." instance=ExtResource("3_42lth")]
 visible = false

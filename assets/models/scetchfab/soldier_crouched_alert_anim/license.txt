@@ -1,0 +1,11 @@
+Model Information:
+* title:	Soldier Crouched Alert Anim
+* source:	https://sketchfab.com/3d-models/soldier-crouched-alert-anim-9b73b36ba2184bd1bde5b42810752b69
+* author:	britdawgmasterfunk (https://sketchfab.com/britdawgmasterfunk)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Soldier Crouched Alert Anim" (https://sketchfab.com/3d-models/soldier-crouched-alert-anim-9b73b36ba2184bd1bde5b42810752b69) by britdawgmasterfunk (https://sketchfab.com/britdawgmasterfunk) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

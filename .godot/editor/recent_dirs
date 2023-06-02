@@ -1,8 +1,2 @@
-res://resources/environment
-res://scenes/levels
-res://resources/quests
-res://scenes
-res://scripts
-D:/
-res://assets
-D:/FBX2glTF-windows-x86_64
+res://scenes/lvls/scripts
+res://scenes/lvls

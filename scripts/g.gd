@@ -1,11 +1,13 @@
 extends Node
 
+var current_lvl = 0
 var mouse_sens : float = 1.0
 var resolution = {
 0:Vector2(640,360),
 1:Vector2(1280,720),
-2:Vector2(1600,900),
-3:Vector2(1920,1080)}
+2:Vector2(1440,900),
+3:Vector2(1600,900),
+4:Vector2(1920,1080)}
 var current_resolution : Vector2 = resolution[3]
 var is_fullscreen : bool = false
 var is_vsync : bool = true 
@@ -36,7 +38,8 @@ var current_scene : Node
 func _ready(): 
 	current_scene = get_tree().current_scene 
 # Код смены сцены 
-func change_scene(path: String, params := []): 
+func change_scene(path: String, params := []):
+	current_scene = get_tree().current_scene 
 	if ResourceLoader.exists(path): 
 		if is_instance_valid(current_scene): 
 			current_scene.queue_free() 

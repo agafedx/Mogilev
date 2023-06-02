@@ -1,5 +1,5 @@
-class_name Player
 extends CharacterBody3D
+class_name Player
 var look_sens = G.mouse_sens * 0.01
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") 
 var is_sprinting : bool = false
@@ -17,6 +17,7 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("jump") && is_on_floor():
 		velocity.y = jump_velocity
+		$model/AnimationTree.get("parameters/playback").travel("Rig|jump")
 	
 	if Input.is_action_pressed("sprint"):
 		is_sprinting = true
@@ -27,6 +28,7 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		$model/AnimationTree.get("parameters/playback").travel("Rig|run")
 	else:
 		velocity.x = move_toward(velocity.x,0,speed)	
 		velocity.z = move_toward(velocity.x,0,speed)	
@@ -51,6 +53,10 @@ func _input(event):
 	$Control/Label.text = "FPS: %s"%[Engine.get_frames_per_second()]
 func fire():
 	G.bullets -= 1
+	var temporary = $shoot.duplicate()
+	add_child(temporary)
+	temporary.play()
+	del(temporary)
 	$Control/Panel/Label.text = str(G.bullets)+"/"+str(G.max_bullets)
 	raycast.force_raycast_update()
 	if!raycast.is_colliding():
@@ -58,6 +64,7 @@ func fire():
 	var collider = raycast.get_collider()
 	if collider is Enemy:
 		collider.damage(10)
+	
 func reload():
 	if G.ammo >= G.max_bullets:
 		G.ammo -= G.max_bullets-G.bullets
@@ -78,3 +85,10 @@ func reload():
 		add_child(t)
 	$Control/Panel/Label2.text=str(G.ammo)
 	$Control/Panel/Label.text = str(G.bullets)+"/"+str(G.max_bullets)
+
+func del(x):
+	await get_tree().create_timer(2).timeout
+	x.queue_free()
+
+func reload_sound():
+	$reload.play()

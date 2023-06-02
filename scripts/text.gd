@@ -1,5 +1,5 @@
-class_name text_ivent
 extends Control
+class_name text_ivent
 var base_text : String 
 var array_mode : bool = false
 var text_arr : PackedStringArray

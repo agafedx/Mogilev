@@ -1,0 +1,11 @@
+Model Information:
+* title:	WW2 Cityscene
+* source:	https://sketchfab.com/3d-models/ww2-cityscene-79478e179b854714a7bbfb49d2e48ef5
+* author:	SybranAerts (https://sketchfab.com/SybranAerts)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "WW2 Cityscene" (https://sketchfab.com/3d-models/ww2-cityscene-79478e179b854714a7bbfb49d2e48ef5) by SybranAerts (https://sketchfab.com/SybranAerts) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

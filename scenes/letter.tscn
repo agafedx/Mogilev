@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccbbv60q6xivw"]
+[gd_scene load_steps=4 format=3 uid="uid://ccbbv60q6xivw"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_6vg4r"]
-[ext_resource type="PackedScene" uid="uid://qiyj01s84nhv" path="res://scenes/quest.tscn" id="2_eo1uf"]
 [ext_resource type="Texture2D" uid="uid://ciy4vh6ur6okf" path="res://assets/d7acf1fe03f85378636c0dd4d0a1413f.png" id="3_ml56k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jff5h"]
@@ -9,14 +8,15 @@ size = Vector3(1.89457, 1, 1.54099)
 
 [node name="letter" type="Area3D"]
 script = ExtResource("1_6vg4r")
-quest_scene = ExtResource("2_eo1uf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_jff5h")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.12228, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0.680165, 0)
 billboard = 2
 texture = ExtResource("3_ml56k")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

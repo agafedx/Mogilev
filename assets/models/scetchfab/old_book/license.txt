@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Book
+* source:	https://sketchfab.com/3d-models/old-book-cc887c88fe954dc2a4be11fcfb83fec6
+* author:	Habib Siddick (https://sketchfab.com/habibshiddick3)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Book" (https://sketchfab.com/3d-models/old-book-cc887c88fe954dc2a4be11fcfb83fec6) by Habib Siddick (https://sketchfab.com/habibshiddick3) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

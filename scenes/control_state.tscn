@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c16d1rp4ro73w"]
+[gd_scene load_steps=5 format=3 uid="uid://c16d1rp4ro73w"]
 
 [ext_resource type="Script" path="res://scripts/cs.gd" id="1_rludc"]
-[ext_resource type="Resource" uid="uid://dihtd621a3qhu" path="res://resources/quests/1.tres" id="2_aibcy"]
-[ext_resource type="Resource" uid="uid://1mnpaq42tryv" path="res://resources/quests/2.tres" id="3_tw46b"]
+[ext_resource type="Resource" uid="uid://dihtd621a3qhu" path="res://resources/quests/home.tres" id="2_aibcy"]
+[ext_resource type="Resource" uid="uid://1mnpaq42tryv" path="res://resources/quests/quest1.tres" id="3_aoktt"]
+[ext_resource type="Resource" uid="uid://o1i0cisqgkod" path="res://resources/quests/quest2.tres" id="4_n28yc"]
 
 [node name="control_state" type="Node"]
 script = ExtResource("1_rludc")
-q = Array[Resource]([ExtResource("2_aibcy"), ExtResource("3_tw46b")])
+q = Array[Resource]([ExtResource("2_aibcy"), ExtResource("3_aoktt"), ExtResource("4_n28yc")])

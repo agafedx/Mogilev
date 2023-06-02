@@ -1,0 +1,11 @@
+Model Information:
+* title:	WW2 -Soldier
+* source:	https://sketchfab.com/3d-models/ww2-soldier-cfaa6e4bae134662988ac7190b8b3e5d
+* author:	Pixel (https://sketchfab.com/stefan.lengyel1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "WW2 -Soldier" (https://sketchfab.com/3d-models/ww2-soldier-cfaa6e4bae134662988ac7190b8b3e5d) by Pixel (https://sketchfab.com/stefan.lengyel1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

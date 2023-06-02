@@ -123,16 +123,18 @@ offset_bottom = 192.0
 
 [node name="OptionButton" type="OptionButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
-item_count = 4
-selected = 3
+item_count = 5
+selected = 2
 popup/item_0/text = "640x360"
 popup/item_0/id = 0
 popup/item_1/text = "1280x720"
 popup/item_1/id = 1
-popup/item_2/text = "1600x900"
+popup/item_2/text = "1440x900"
 popup/item_2/id = 2
-popup/item_3/text = "1920x1080"
+popup/item_3/text = "1600x900"
 popup/item_3/id = 3
+popup/item_4/text = "1920x1080"
+popup/item_4/id = 4
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0

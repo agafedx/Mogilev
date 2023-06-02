@@ -1,0 +1,11 @@
+Model Information:
+* title:	Blue_rus_small
+* source:	https://sketchfab.com/3d-models/blue-rus-small-4364aacce62e47f8bebf8cd39feb2b32
+* author:	DANILADESIGN.RU (https://sketchfab.com/vychurov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Blue_rus_small" (https://sketchfab.com/3d-models/blue-rus-small-4364aacce62e47f8bebf8cd39feb2b32) by DANILADESIGN.RU (https://sketchfab.com/vychurov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

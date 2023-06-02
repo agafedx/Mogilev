@@ -1,0 +1,11 @@
+Model Information:
+* title:	Book - Encyclopedia
+* source:	https://sketchfab.com/3d-models/book-encyclopedia-0487cb088c244d02a736cb337e65778c
+* author:	Maxence Rouillet (https://sketchfab.com/maxencerouillet)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Book - Encyclopedia" (https://sketchfab.com/3d-models/book-encyclopedia-0487cb088c244d02a736cb337e65778c) by Maxence Rouillet (https://sketchfab.com/maxencerouillet) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Q" load_steps=2 format=3 uid="uid://1mnpaq42tryv"]
+
+[ext_resource type="Script" path="res://scripts/q.gd" id="1_fp0xm"]
+
+[resource]
+script = ExtResource("1_fp0xm")
+name = "Три фашиста"
+text = "Убей трёх фашистов за танком"
+act_id = 1
+count = 3
+is_active = false
+is_killing = true
+is_collecting = false

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lady in a trenchcoat
+* source:	https://sketchfab.com/3d-models/lady-in-a-trenchcoat-0c78873c1dbf4c29b53bc8576258a74a
+* author:	ustoopia (https://sketchfab.com/ustoopia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lady in a trenchcoat" (https://sketchfab.com/3d-models/lady-in-a-trenchcoat-0c78873c1dbf4c29b53bc8576258a74a) by ustoopia (https://sketchfab.com/ustoopia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

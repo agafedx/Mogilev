@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bonfire-Lowpoly
+* source:	https://sketchfab.com/3d-models/bonfire-lowpoly-5bfbb9ff05fa4d139affb7af5fecee3f
+* author:	Christian Gentry (https://sketchfab.com/christianjgentry)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bonfire-Lowpoly" (https://sketchfab.com/3d-models/bonfire-lowpoly-5bfbb9ff05fa4d139affb7af5fecee3f) by Christian Gentry (https://sketchfab.com/christianjgentry) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

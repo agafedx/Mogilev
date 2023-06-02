@@ -5,7 +5,7 @@ var num : int = 0
 var t : Timer
 var b : bool= false 
 func _ready():
-	$Panel/RichTextLabel.text = cs.q[id].text
+	$Panel/Label3.text = cs.q[id].text
 	$Panel/Label.text = cs.q[id].name
 	$AnimationPlayer.play("idle")
 	G.is_text_showing = true
